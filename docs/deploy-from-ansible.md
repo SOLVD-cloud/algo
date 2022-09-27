@@ -170,9 +170,12 @@ Additional variables:
                 "ec2:CreateVpc",
                 "ec2:DescribeInternetGateways",
                 "ec2:ModifyVpcAttribute",
-                "ec2:createTags",
+                "ec2:CreateTags",
                 "ec2:CreateSubnet",
-                "ec2:Associate*",
+                "ec2:AssociateVpcCidrBlock",
+                "ec2:AssociateSubnetCidrBlock",
+                "ec2:AssociateRouteTable",
+                "ec2:AssociateAddress",
                 "ec2:CreateRouteTable",
                 "ec2:AttachInternetGateway",
                 "ec2:DescribeRouteTables",
@@ -245,6 +248,7 @@ Possible options can be gathered via cli `aws lightsail get-regions`
                 "lightsail:DisableAddOn",
                 "lightsail:PutInstancePublicPorts",
                 "lightsail:StartInstance",
+                "lightsail:TagResource",
                 "lightsail:GetStaticIp",
                 "lightsail:AllocateStaticIp",
                 "lightsail:AttachStaticIp"
@@ -258,6 +262,7 @@ Possible options can be gathered via cli `aws lightsail get-regions`
             "Effect": "Allow",
             "Action": [
                 "cloudformation:CreateStack",
+                "cloudformation:UpdateStack",
                 "cloudformation:DescribeStacks",
                 "cloudformation:DescribeStackEvents",
                 "cloudformation:ListStackResources"
